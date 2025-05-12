@@ -1,0 +1,102 @@
+[
+  {
+    "id": "f9becc0f-5c49-45e5-90a4-5b3cc3bc80e7",
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "genre": "Fiction",
+    "publisher": "Scribner",
+    "price": 10.99,
+    "pages": 180,
+    "isInStock": true
+  },
+  {
+    "id": "6ae80b4f-c234-4cc2-b03e-6c33c4589ebd",
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "genre": "Fiction",
+    "publisher": "J.B. Lippincott & Co.",
+    "price": 12.99,
+    "pages": 281,
+    "isInStock": true
+  },
+  {
+    "id": "f8fe5e3b-2d7e-4060-bbb4-ecde7c85e41e",
+    "title": "1984",
+    "author": "George Orwell",
+    "genre": "Dystopian, Political Fiction",
+    "publisher": "Secker & Warburg",
+    "price": 9.99,
+    "pages": 328,
+    "isInStock": false
+  },
+  {
+    "id": "cf1a7eb1-6c99-432f-9948-7a0e0e7c0801",
+    "title": "Moby-Dick",
+    "author": "Herman Melville",
+    "genre": "Adventure, Fiction",
+    "publisher": "Richard Bentley",
+    "price": 15.5,
+    "pages": 635,
+    "isInStock": true
+  },
+  {
+    "id": "9263d6cd-7d02-45ff-a3d0-03b2f350c27b",
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "genre": "Romantic Fiction",
+    "publisher": "T. Egerton, Whitehall",
+    "price": 8.99,
+    "pages": 279,
+    "isInStock": true
+  },
+  {
+    "id": "a4f5f174-3695-4bc1-8549-b1770d9dc452",
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "genre": "Fiction",
+    "publisher": "Little, Brown and Company",
+    "price": 10.5,
+    "pages": 214,
+    "isInStock": false
+  },
+  {
+    "id": "1e30a79a-1777-49f8-bb6c-37fc0cb10910",
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "genre": "Fantasy",
+    "publisher": "George Allen & Unwin",
+    "price": 14.99,
+    "pages": 310,
+    "isInStock": true
+  },
+  {
+    "id": "74c26c99-6453-4a7f-86cb-8ff5a6438ce3",
+    "title": "The Odyssey",
+    "author": "Homer",
+    "genre": "Epic Poetry",
+    "publisher": "Random House",
+    "price": 7.99,
+    "pages": 540,
+    "isInStock": false
+  },
+  {
+    "id": "c3784201-cb1f-4621-93a8-3e580ad5e19f",
+    "title": "Crime and Punishment",
+    "author": "Fyodor Dostoevsky",
+    "genre": "Psychological Fiction",
+    "publisher": "The Russian Messenger",
+    "price": 11.99,
+    "pages": 430,
+    "isInStock": true
+  },
+  {
+    "title": "UPDATED",
+    "author": "F. Scott Fitzgerald",
+    "genre": "Fiction",
+    "publisher": "Scribner",
+    "price": 100.99,
+    "pages": 180,
+    "isInStock": true,
+    "id": "54260da6-620e-4b35-879e-24db54d438e4"
+  }
+]
