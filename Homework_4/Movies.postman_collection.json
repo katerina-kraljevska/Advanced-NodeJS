@@ -1,0 +1,324 @@
+{
+	"info": {
+		"_postman_id": "b2e771a0-ec5a-4ee8-a65b-8f538ddef2e2",
+		"name": "Movies",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43059520"
+	},
+	"item": [
+		{
+			"name": "create Movie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Darkest Hour\",\r\n    \"description\": \"Chronicles Winston Churchill's early days as Prime Minister during WWII as he struggles to rally the British people against the Nazis.\",\r\n    \"release_year\": 2017,\r\n    \"genre\": \"drama\",\r\n    \"duration\": 125,\r\n    \"rating\": 7.4\r\n    \r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/movies",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all movies -minRating",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Oppenheimer\",\r\n  \"description\": \"It follows the life of J. Robert Oppenheimer, the American theoretical physicist who helped develop the first nuclear weapons during World War II.\",\r\n  \"release_year\": 2023,\r\n  \"genre\": \"drama\",\r\n  \"duration\": 180,\r\n  \"rating\": 9.2,\r\n  \"poster_url\": \"https://www.imdb.com/title/tt15398776/mediaviewer/rm2670601217/?ref_=tt_ov_i\",\r\n  \"created_at\": \"2025-03-03\"\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/movies?minRating=9",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"movies"
+					],
+					"query": [
+						{
+							"key": "minRating",
+							"value": "9"
+						},
+						{
+							"key": null,
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all movies",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Oppenheimer\",\r\n  \"description\": \"It follows the life of J. Robert Oppenheimer, the American theoretical physicist who helped develop the first nuclear weapons during World War II.\",\r\n  \"release_year\": 2023,\r\n  \"genre\": \"drama\",\r\n  \"duration\": 180,\r\n  \"rating\": 9.2,\r\n  \"poster_url\": \"https://www.imdb.com/title/tt15398776/mediaviewer/rm2670601217/?ref_=tt_ov_i\",\r\n  \"created_at\": \"2025-03-03\"\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/movies",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all movies titile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Oppenheimer\",\r\n  \"description\": \"It follows the life of J. Robert Oppenheimer, the American theoretical physicist who helped develop the first nuclear weapons during World War II.\",\r\n  \"release_year\": 2023,\r\n  \"genre\": \"drama\",\r\n  \"duration\": 180,\r\n  \"rating\": 9.2,\r\n  \"poster_url\": \"https://www.imdb.com/title/tt15398776/mediaviewer/rm2670601217/?ref_=tt_ov_i\",\r\n  \"created_at\": \"2025-03-03\"\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/movies?title=Oppenheimer",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"movies"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "Oppenheimer"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all movies sortDuration",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Oppenheimer\",\r\n  \"description\": \"It follows the life of J. Robert Oppenheimer, the American theoretical physicist who helped develop the first nuclear weapons during World War II.\",\r\n  \"release_year\": 2023,\r\n  \"genre\": \"drama\",\r\n  \"duration\": 180,\r\n  \"rating\": 9.2,\r\n  \"poster_url\": \"https://www.imdb.com/title/tt15398776/mediaviewer/rm2670601217/?ref_=tt_ov_i\",\r\n  \"created_at\": \"2025-03-03\"\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/movies?sortBy=duration",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"movies"
+					],
+					"query": [
+						{
+							"key": "sortBy",
+							"value": "duration"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all movies sortBy and sortOrder",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Oppenheimer\",\r\n  \"description\": \"It follows the life of J. Robert Oppenheimer, the American theoretical physicist who helped develop the first nuclear weapons during World War II.\",\r\n  \"release_year\": 2023,\r\n  \"genre\": \"drama\",\r\n  \"duration\": 180,\r\n  \"rating\": 9.2,\r\n  \"poster_url\": \"https://www.imdb.com/title/tt15398776/mediaviewer/rm2670601217/?ref_=tt_ov_i\",\r\n  \"created_at\": \"2025-03-03\"\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/movies?sortBy=rating&sortOrder=ASC",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"movies"
+					],
+					"query": [
+						{
+							"key": "sortBy",
+							"value": "rating"
+						},
+						{
+							"key": "sortOrder",
+							"value": "ASC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all movies - maxDuration",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Oppenheimer\",\r\n  \"description\": \"It follows the life of J. Robert Oppenheimer, the American theoretical physicist who helped develop the first nuclear weapons during World War II.\",\r\n  \"release_year\": 2023,\r\n  \"genre\": \"drama\",\r\n  \"duration\": 180,\r\n  \"rating\": 9.2,\r\n  \"poster_url\": \"https://www.imdb.com/title/tt15398776/mediaviewer/rm2670601217/?ref_=tt_ov_i\",\r\n  \"created_at\": \"2025-03-03\"\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/movies?maxDuration=120",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"movies"
+					],
+					"query": [
+						{
+							"key": "maxDuration",
+							"value": "120"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all movies -genre",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Oppenheimer\",\r\n  \"description\": \"It follows the life of J. Robert Oppenheimer, the American theoretical physicist who helped develop the first nuclear weapons during World War II.\",\r\n  \"release_year\": 2023,\r\n  \"genre\": \"drama\",\r\n  \"duration\": 180,\r\n  \"rating\": 9.2,\r\n  \"poster_url\": \"https://www.imdb.com/title/tt15398776/mediaviewer/rm2670601217/?ref_=tt_ov_i\",\r\n  \"created_at\": \"2025-03-03\"\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/movies/?genre=drama",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"movies",
+						""
+					],
+					"query": [
+						{
+							"key": "genre",
+							"value": "drama"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get movie by id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Oppenheimer\",\r\n  \"description\": \"It follows the life of J. Robert Oppenheimer, the American theoretical physicist who helped develop the first nuclear weapons during World War II.\",\r\n  \"release_year\": 2023,\r\n  \"genre\": \"drama\",\r\n  \"duration\": 180,\r\n  \"rating\": 9.2,\r\n  \"poster_url\": \"https://www.imdb.com/title/tt15398776/mediaviewer/rm2670601217/?ref_=tt_ov_i\",\r\n  \"created_at\": \"2025-03-03\"\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/movies/9b8bdae5-f932-4ed0-8121-db479e3f92c5",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"movies",
+						"9b8bdae5-f932-4ed0-8121-db479e3f92c5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update movie",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Oppenheimer- updated\",\r\n  \"description\": \"It follows the life of J. Robert Oppenheimer, the American theoretical physicist who helped develop the first nuclear weapons during World War II.\",\r\n  \"release_year\": 2023,\r\n  \"genre\": \"drama\",\r\n  \"duration\": 180,\r\n  \"rating\": 9.2,\r\n  \"poster_url\": \"https://www.imdb.com/title/tt15398776/mediaviewer/rm2670601217/?ref_=tt_ov_i\",\r\n  \"created_at\": \"2025-03-03\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/movies/9b8bdae5-f932-4ed0-8121-db479e3f92c5",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"movies",
+						"9b8bdae5-f932-4ed0-8121-db479e3f92c5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete movie",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Oppenheimer\",\r\n  \"description\": \"It follows the life of J. Robert Oppenheimer, the American theoretical physicist who helped develop the first nuclear weapons during World War II.\",\r\n  \"release_year\": 2023,\r\n  \"genre\": \"drama\",\r\n  \"duration\": 180,\r\n  \"rating\": 9.2,\r\n  \"poster_url\": \"https://www.imdb.com/title/tt15398776/mediaviewer/rm2670601217/?ref_=tt_ov_i\",\r\n  \"created_at\": \"2025-03-03\"\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/movies/b8516f8e-79d2-4e85-883b-7ad4f26a291a",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"movies",
+						"b8516f8e-79d2-4e85-883b-7ad4f26a291a"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
