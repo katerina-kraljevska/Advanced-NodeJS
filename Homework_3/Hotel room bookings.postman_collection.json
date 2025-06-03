@@ -1,0 +1,215 @@
+{
+	"info": {
+		"_postman_id": "ac52e05a-0345-4750-b057-c413cee8677a",
+		"name": "Hotel room bookings",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43059520"
+	},
+	"item": [
+		{
+			"name": "get all room bookings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/rooms",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"rooms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all room bookings filters-minPrice",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/rooms?minPrice=250",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"rooms"
+					],
+					"query": [
+						{
+							"key": "minPrice",
+							"value": "250"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all room bookings filters-maxPrice",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/rooms?maxPrice=150",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"rooms"
+					],
+					"query": [
+						{
+							"key": "maxPrice",
+							"value": "150"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all room bookings filters-isAvaliable",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/rooms?isAvaliable=false",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"rooms"
+					],
+					"query": [
+						{
+							"key": "isAvaliable",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all room bookings filters - room type",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/rooms?type=DOUBLE",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"rooms"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "DOUBLE"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get room booking by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/rooms/3629b13a-df4d-4a4a-9ac5-499618e9fa68",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"rooms",
+						"3629b13a-df4d-4a4a-9ac5-499618e9fa68"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New room boking",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"roomNumber\": 232,\r\n        \"type\": \"DOUBLE\",\r\n        \"price\": 250,\r\n        \"isAvalible\": false,\r\n        \"details\": {\r\n            \"amenities\": [\r\n                \"Wi-fi\",\r\n                \"TV\",\r\n                \"Mini Bar\",\r\n                \"Jacuzzi\"\r\n            ],\r\n            \"maxOccupancy\": 4,\r\n            \"lastCleaned\": \"2025-05-28\"\r\n          \r\n        }\r\n        \r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/rooms",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"rooms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update room booking",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"roomNumber\": 202,\r\n    \"type\": \"SUITE\",\r\n    \"price\": 250,\r\n    \"isAvalible\": false,\r\n    \"details\": {\r\n        \"amenities\": [\r\n            \"Wi-fi\",\r\n            \"TV\",\r\n            \"Mini Bar\",\r\n            \"Jacuzzi\"\r\n        ],\r\n        \"maxOccupancy\": 4,\r\n        \"lastCleaned\": \"2025-05-28\",\r\n        \"maintenanceNotes\": \"Bathroom sink needs repair. UPDATED\"\r\n    }\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/rooms/3629b13a-df4d-4a4a-9ac5-499618e9fa68",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"rooms",
+						"3629b13a-df4d-4a4a-9ac5-499618e9fa68"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete room booking",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"roomNumber\": 232,\r\n        \"type\": \"DOUBLE\",\r\n        \"price\": 250,\r\n        \"isAvalible\": false,\r\n        \"details\": {\r\n            \"amenities\": [\r\n                \"Wi-fi\",\r\n                \"TV\",\r\n                \"Mini Bar\",\r\n                \"Jacuzzi\"\r\n            ],\r\n            \"maxOccupancy\": 4,\r\n            \"lastCleaned\": \"2025-05-28\"\r\n          \r\n        }\r\n        \r\n    }"
+				},
+				"url": {
+					"raw": "{{url}}/rooms/c9fc31f4-3c60-46a3-8ac8-44b66af603dd",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"rooms",
+						"c9fc31f4-3c60-46a3-8ac8-44b66af603dd"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

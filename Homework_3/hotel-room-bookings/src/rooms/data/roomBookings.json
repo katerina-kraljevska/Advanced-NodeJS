@@ -1,0 +1,40 @@
+[
+  {
+    "roomNumber": 101,
+    "type": "DOUBLE",
+    "price": 150,
+    "isAvaliable": true,
+    "details": {
+      "amenities": ["Wi-fi", "TV", "Air Conditioning"],
+      "maxOccupancy": 3,
+      "lastCleaned": "2025-06-01",
+      "maintenanceNotes": "Room cleaned thoroughly and checked for electrical issues."
+    },
+    "id": "17269149-4a5f-4cfb-bc18-d6afa2ca2f0c"
+  },
+  {
+    "roomNumber": 202,
+    "type": "SUITE",
+    "price": 250,
+    "isAvaliable": false,
+    "details": {
+      "amenities": ["Wi-fi", "TV", "Mini Bar", "Jacuzzi"],
+      "maxOccupancy": 4,
+      "lastCleaned": "2025-05-28",
+      "maintenanceNotes": "Bathroom sink needs repair. UPDATED"
+    },
+    "id": "3629b13a-df4d-4a4a-9ac5-499618e9fa68"
+  },
+  {
+    "roomNumber": 232,
+    "type": "DOUBLE",
+    "price": 250,
+    "isAvaliable": false,
+    "details": {
+      "amenities": ["Wi-fi", "TV", "Mini Bar", "Jacuzzi"],
+      "maxOccupancy": 4,
+      "lastCleaned": "2025-05-28"
+    },
+    "id": "eff23932-6d2d-4077-916b-936b08aedcd3"
+  }
+]
