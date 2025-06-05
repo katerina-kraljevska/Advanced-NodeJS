@@ -1,0 +1,768 @@
+{
+	"info": {
+		"_postman_id": "b2e771a0-ec5a-4ee8-a65b-8f538ddef2e2",
+		"name": "Movies",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43059520"
+	},
+	"item": [
+		{
+			"name": "create Movie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Oppenheimer\",\r\n  \"description\": \"It follows the life of J. Robert Oppenheimer, the American theoretical physicist who helped develop the first nuclear weapons during World War II.\",\r\n  \"release_year\": 2023,\r\n  \"genre\": \"drama\",\r\n  \"directorId\": \"80783dda-04d4-42a3-81e5-5fb0060aaac9\",\r\n  \"actorsIds\": [\"d4090d0b-6780-4dad-9058-fa58e4507a85\"],\r\n  \"duration\": 180,\r\n  \"rating\": 8.7,\r\n  \"poster_url\": \"https://www.imdb.com/title/tt15398776/mediaviewer/rm2670601217/?ref_=tt_ov_i\",\r\n  \"created_at\": \"2025-03-03T00:00:00.000Z\",\r\n  \"usersIds\": []\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/movies",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all movies -minRating",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Oppenheimer\",\r\n  \"description\": \"It follows the life of J. Robert Oppenheimer, the American theoretical physicist who helped develop the first nuclear weapons during World War II.\",\r\n  \"release_year\": 2023,\r\n  \"genre\": \"drama\",\r\n  \"duration\": 180,\r\n  \"rating\": 9.2,\r\n  \"poster_url\": \"https://www.imdb.com/title/tt15398776/mediaviewer/rm2670601217/?ref_=tt_ov_i\",\r\n  \"created_at\": \"2025-03-03\"\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/movies?minRating=9",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"movies"
+					],
+					"query": [
+						{
+							"key": "minRating",
+							"value": "9"
+						},
+						{
+							"key": null,
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all movies",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Oppenheimer\",\r\n  \"description\": \"It follows the life of J. Robert Oppenheimer, the American theoretical physicist who helped develop the first nuclear weapons during World War II.\",\r\n  \"release_year\": 2023,\r\n  \"genre\": \"drama\",\r\n  \"duration\": 180,\r\n  \"rating\": 9.2,\r\n  \"poster_url\": \"https://www.imdb.com/title/tt15398776/mediaviewer/rm2670601217/?ref_=tt_ov_i\",\r\n  \"created_at\": \"2025-03-03\"\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/movies",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all movies titile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Oppenheimer\",\r\n  \"description\": \"It follows the life of J. Robert Oppenheimer, the American theoretical physicist who helped develop the first nuclear weapons during World War II.\",\r\n  \"release_year\": 2023,\r\n  \"genre\": \"drama\",\r\n  \"duration\": 180,\r\n  \"rating\": 9.2,\r\n  \"poster_url\": \"https://www.imdb.com/title/tt15398776/mediaviewer/rm2670601217/?ref_=tt_ov_i\",\r\n  \"created_at\": \"2025-03-03\"\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/movies?title=Oppenheimer",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"movies"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "Oppenheimer"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all movies sortDuration",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Oppenheimer\",\r\n  \"description\": \"It follows the life of J. Robert Oppenheimer, the American theoretical physicist who helped develop the first nuclear weapons during World War II.\",\r\n  \"release_year\": 2023,\r\n  \"genre\": \"drama\",\r\n  \"duration\": 180,\r\n  \"rating\": 9.2,\r\n  \"poster_url\": \"https://www.imdb.com/title/tt15398776/mediaviewer/rm2670601217/?ref_=tt_ov_i\",\r\n  \"created_at\": \"2025-03-03\"\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/movies?sortBy=duration",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"movies"
+					],
+					"query": [
+						{
+							"key": "sortBy",
+							"value": "duration"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all movies sortBy and sortOrder",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Oppenheimer\",\r\n  \"description\": \"It follows the life of J. Robert Oppenheimer, the American theoretical physicist who helped develop the first nuclear weapons during World War II.\",\r\n  \"release_year\": 2023,\r\n  \"genre\": \"drama\",\r\n  \"duration\": 180,\r\n  \"rating\": 9.2,\r\n  \"poster_url\": \"https://www.imdb.com/title/tt15398776/mediaviewer/rm2670601217/?ref_=tt_ov_i\",\r\n  \"created_at\": \"2025-03-03\"\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/movies?sortBy=rating&sortOrder=ASC",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"movies"
+					],
+					"query": [
+						{
+							"key": "sortBy",
+							"value": "rating"
+						},
+						{
+							"key": "sortOrder",
+							"value": "ASC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all movies - maxDuration",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Oppenheimer\",\r\n  \"description\": \"It follows the life of J. Robert Oppenheimer, the American theoretical physicist who helped develop the first nuclear weapons during World War II.\",\r\n  \"release_year\": 2023,\r\n  \"genre\": \"drama\",\r\n  \"duration\": 180,\r\n  \"rating\": 9.2,\r\n  \"poster_url\": \"https://www.imdb.com/title/tt15398776/mediaviewer/rm2670601217/?ref_=tt_ov_i\",\r\n  \"created_at\": \"2025-03-03\"\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/movies?maxDuration=120",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"movies"
+					],
+					"query": [
+						{
+							"key": "maxDuration",
+							"value": "120"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all movies -genre",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Oppenheimer\",\r\n  \"description\": \"It follows the life of J. Robert Oppenheimer, the American theoretical physicist who helped develop the first nuclear weapons during World War II.\",\r\n  \"release_year\": 2023,\r\n  \"genre\": \"drama\",\r\n  \"duration\": 180,\r\n  \"rating\": 9.2,\r\n  \"poster_url\": \"https://www.imdb.com/title/tt15398776/mediaviewer/rm2670601217/?ref_=tt_ov_i\",\r\n  \"created_at\": \"2025-03-03\"\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/movies/?genre=drama",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"movies",
+						""
+					],
+					"query": [
+						{
+							"key": "genre",
+							"value": "drama"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get movie by id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Oppenheimer\",\r\n  \"description\": \"It follows the life of J. Robert Oppenheimer, the American theoretical physicist who helped develop the first nuclear weapons during World War II.\",\r\n  \"release_year\": 2023,\r\n  \"genre\": \"drama\",\r\n  \"duration\": 180,\r\n  \"rating\": 9.2,\r\n  \"poster_url\": \"https://www.imdb.com/title/tt15398776/mediaviewer/rm2670601217/?ref_=tt_ov_i\",\r\n  \"created_at\": \"2025-03-03\"\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/movies/9b8bdae5-f932-4ed0-8121-db479e3f92c5",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"movies",
+						"9b8bdae5-f932-4ed0-8121-db479e3f92c5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update movie",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \r\n        \"title\": \"Oppenheimer\",\r\n        \"description\": \"It follows the life of J. Robert Oppenheimer, the American theoretical physicist who helped develop the first nuclear weapons during World War II.\",\r\n        \"release_year\": 2023,\r\n        \"genre\": \"drama\",\r\n        \"duration\": 180,\r\n        \"actorsIds\": [\"d4090d0b-6780-4dad-9058-fa58e4507a85\"],\r\n        \"rating\": 8.7,\r\n        \"poster_url\": \"https://www.imdb.com/title/tt15398776/mediaviewer/rm2670601217/?ref_=tt_ov_i\",\r\n        \"created_at\": \"2025-03-03T00:00:00.000Z\",\r\n        \"updated_at\": \"2025-06-04T13:41:00.756Z\",\r\n        \"usersIds\": [\"b527e950-224f-4e9f-8538-f54019230899\"]\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/movies/ad4734f7-f016-4aeb-a53e-8c19e8c0a8fe",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"movies",
+						"ad4734f7-f016-4aeb-a53e-8c19e8c0a8fe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete movie",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Oppenheimer\",\r\n  \"description\": \"It follows the life of J. Robert Oppenheimer, the American theoretical physicist who helped develop the first nuclear weapons during World War II.\",\r\n  \"release_year\": 2023,\r\n  \"genre\": \"drama\",\r\n  \"duration\": 180,\r\n  \"rating\": 9.2,\r\n  \"poster_url\": \"https://www.imdb.com/title/tt15398776/mediaviewer/rm2670601217/?ref_=tt_ov_i\",\r\n  \"created_at\": \"2025-03-03\"\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/movies/57b48ae1-60f4-4683-bb26-60ae75af469b",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"movies",
+						"57b48ae1-60f4-4683-bb26-60ae75af469b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new actor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"fullName\": \"Cillian Murphy\",\r\n        \"birthYear\": 1976,\r\n        \"movies\": [\"3aadf75d-4cbd-45bf-8677-6904b62cc772\"]\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/actor",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"actor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllActors",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"fullName\": \"Cillian Murphy\",\r\n        \"birthYear\": 1976,\r\n        \"movies\": \"3aadf75d-4cbd-45bf-8677-6904b62cc772\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/actor",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"actor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getActorById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fullName\": \"Leonardo DiCaprio\",\r\n    \"birthYear\": 1974,\r\n    \"movies\": [\"Inception\"]\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/actor/51d47915-a06c-41cf-a3ac-c96b3ede06c7",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"actor",
+						"51d47915-a06c-41cf-a3ac-c96b3ede06c7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateActor",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movies\": [\"57b48ae1-60f4-4683-bb26-60ae75af469b\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/actor/d4090d0b-6780-4dad-9058-fa58e4507a85",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"actor",
+						"d4090d0b-6780-4dad-9058-fa58e4507a85"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteActor",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fullName\": \"Leonardo DiCaprio updated\",\r\n    \"birthYear\": 1974,\r\n    \"movies\": [\"Inception\"]\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/actor/72f1d671-4d69-48c5-b894-e9d0304d78ee",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"actor",
+						"72f1d671-4d69-48c5-b894-e9d0304d78ee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateDirector",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fullName\": \"James Cameron\",\r\n    \"birthYear\": 1954,\r\n    \"movies\": [\"Titanic\"]\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/director",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"director"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllDirectors",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"fullName\": \"Christopher Nolan\",\r\n    \"birthYear\": 1970,\r\n    \"movies\": [\"Oppenheimer\"]\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/director",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"director"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetDirectorById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"fullName\": \"Christopher Nolan\",\r\n    \"birthYear\": 1970,\r\n    \"movies\": [\"Oppenheimer\"]\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/director/1632c992-9332-486e-8f16-957ff9afc0aa",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"director",
+						"1632c992-9332-486e-8f16-957ff9afc0aa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateDirector",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"fullName\": \"Christopher Nolan-updated\",\r\n    \"birthYear\": 1970,\r\n    \"movies\": [\"Oppenheimer\"]\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/director/8fc998e4-1df4-467c-8bb2-bbee7cb52586",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"director",
+						"8fc998e4-1df4-467c-8bb2-bbee7cb52586"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete director",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"fullName\": \"Christopher Nolan-updated\",\r\n    \"birthYear\": 1970,\r\n    \"movies\": [\"Oppenheimer\"]\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/director/8fc998e4-1df4-467c-8bb2-bbee7cb52586",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"director",
+						"8fc998e4-1df4-467c-8bb2-bbee7cb52586"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register user",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"johndoe1@example.com\",\r\n  \"password\": \"securePass123\",\r\n  \"firstName\": \"John\",\r\n  \"lastName\": \"Doe\",\r\n  \"age\": 25,\r\n  \"movies\": [\"ad4734f7-f016-4aeb-a53e-8c19e8c0a8fe\"],\r\n  \"role\": \"admin\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/auth/register",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiNTI3ZTk1MC0yMjRmLTRlOWYtODUzOC1mNTQwMTkyMzA4OTkiLCJpYXQiOjE3NDkxMDUwMzcsImV4cCI6MTc0OTEwNzQzN30.fpKL-UQX0WaX4_9VPsJ4Ct4GQR_apX5uS04CwyLzucc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"johndoe@example.com\",\r\n  \"password\": \"securePass123\",\r\n  \"firstName\": \"John\",\r\n  \"lastName\": \"Doe\",\r\n  \"age\": 25,\r\n  \"movies\": [\"ad4734f7-f016-4aeb-a53e-8c19e8c0a8fe\"]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/users/3313d057-206b-42d8-b703-cdf19585e127",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"3313d057-206b-42d8-b703-cdf19585e127"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "log in",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"email\": \"johndoe1@example.com\",\r\n  \"password\": \"securePass123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/auth/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiNTI3ZTk1MC0yMjRmLTRlOWYtODUzOC1mNTQwMTkyMzA4OTkiLCJpYXQiOjE3NDkxMDUwMzcsImV4cCI6MTc0OTEwNzQzN30.fpKL-UQX0WaX4_9VPsJ4Ct4GQR_apX5uS04CwyLzucc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiNTI3ZTk1MC0yMjRmLTRlOWYtODUzOC1mNTQwMTkyMzA4OTkiLCJpYXQiOjE3NDkxMDUwMzcsImV4cCI6MTc0OTEwNzQzN30.fpKL-UQX0WaX4_9VPsJ4Ct4GQR_apX5uS04CwyLzucc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"johndoe@example.com\",\r\n  \"password\": \"securePass123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/users",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"johndoe@example.com\",\r\n  \"password\": \"securePass123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/auth/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
